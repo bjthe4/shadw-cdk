@@ -1,17 +1,13 @@
 import EventEmitter from 'events'
 import { Duplex } from 'streamx'
 import DHT, { Server, Socket, KeyPair } from '@hyperswarm/dht'
-import { toBase32 } from './lib/crypto/base32/util.js'
+import { toBase32 } from '../lib/crypto/base32/index.js'
 
-// globals
-// =
-
+// global
 let node: DHT | undefined = undefined
 const activeNodes: Node[] = []
 
-// exported api
-// =
-
+// exported REST API module
 export * as http from './http.js'
 
 export async function setup (opts?: {bootstrap: string[]}): Promise<void> {
@@ -173,8 +169,6 @@ export class ShadowSocket extends EventEmitter {
 }
 
 // internal methods
-// =
-
 function findIndex (keyPair: KeyPair) {
   return activeNodes.findIndex(s => Buffer.compare(s.keyPair.publicKey, keyPair.publicKey) === 0)
 }
