@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Directories
+mkdir -p ./src/models
+mkdir -p ./src/enums
+mkdir -p ./src/interfaces
+
+# Interface files
+touch ./src/interfaces/iAccount.ts
+touch ./src/interfaces/iVPC.ts
+touch ./src/interfaces/iEC2Instance.ts
+touch ./src/interfaces/iFeed.ts
+touch ./src/interfaces/iSwarm.ts
+touch ./src/interfaces/iFeedManager.ts
+
+# Model files
+touch ./src/models/account.ts
+touch ./src/models/vpc.ts
+touch ./src/models/ec2instance.ts
+touch ./src/models/feed.ts
+touch ./src/models/swarm.ts
+touch ./src/models/hyperbee.ts
+touch ./src/models/hyperdrive.ts
+touch ./src/models/feedManager.ts
+
+# Enum files
+touch ./src/enums/instanceTenancy.ts
+touch ./src/enums/region.ts
+
+# Root files
+touch ./README.md
+touch ./package.json
+
+echo "File structure created successfully."
