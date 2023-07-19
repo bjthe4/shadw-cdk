@@ -1,0 +1,24 @@
+{
+  "name": "my-kubernetes-management-api",
+  "version": "1.0.0",
+  "description": "API for managing a Kubernetes cluster",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "kubernetes",
+    "management",
+    "api"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@hyperswarm/dht": "^6.5.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "hypercore-crypto": "^3.3.1",
+    "keypear": "^1.1.1",
+    "msgpackr": "^1.9.5"
+  }
+}
